@@ -1,0 +1,32 @@
+# Build procedure for vasp-5.4.4.pl2
+
+VASP is the Vienna Ab initio Simulation Package:
+
+https://www.vasp.at/
+
+https://en.wikipedia.org/wiki/Vienna_Ab_initio_Simulation_Package
+
+Obtain a properly licensed copy of VASP in order to use the software.
+
+This assumes the downloaded package is placed in the current directory.
+
+Prepare:
+
+```
+$ tar --extract --file vasp.5.4.4.pl2.tgz
+$ cd vasp.5.4.4.pl2
+```
+
+Load needed modules:
+
+```
+$ module load netCDF-Fortran
+```
+
+Copy makefile for the architecture and build:
+
+
+```
+$ cp arch/makefile.include.linux_intel makefile.include
+$ make all
+```
